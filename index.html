@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1 onclick="location.reload()">
+      <i class="fa-solid fa-table-list"></i> Simple To-Do
+    </h1>
+
+    <div class="container-main">
+      <div>
+        <button onclick="showTasks()" id="showTasksButton">Hide tasks</button>
+      </div>
+
+      <div class="tasksWrapper">
+        <div id="allTasks"></div>
+      </div>
+
+      <div id="deleteMsg"></div>
+
+      <div id="updateMsg"></div>
+
+      <button onclick="addTasks()" id="addTaskButton">Add task</button>
+
+      <div id="addTask"></div>
+
+      <div id="successMsg"></div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+
+  <footer>Created by Srinath. All rights reserved.</footer>
+</html>

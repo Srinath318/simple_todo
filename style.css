@@ -1,0 +1,189 @@
+/* General styling */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: radial-gradient(
+    farthest-corner at top left,
+    #000000 0%,
+    #242835 40%,
+    #0b0b1b 80%,
+    #0e062a 100%
+  );
+  color: #fcf6ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2em;
+  background: linear-gradient(to right, #683b8a, #5c2586);
+  width: 100%;
+  padding: 1.5% 0;
+  margin: 0 0;
+  border-bottom-left-radius: 40px; /* curve left corner */
+  border-bottom-right-radius: 40px;
+  cursor: pointer;
+}
+.container-main {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+} /* Buttons */
+button {
+  padding: 10px 18px;
+  margin: 8px;
+  border: none;
+  background: linear-gradient(to right, #683b8a, #5c2586);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(to right, #502572, #4b1379);
+} /* Task list */
+#allTasks {
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(to right, #7a354c, #862542);
+  padding: 1% 3%;
+  margin-top: 20px;
+  border-radius: 40px;
+  max-height: 350px;
+  overflow-y: auto; /* add space so scrollbar doesn't hug the border */
+  padding-right: 12px;
+  padding-left: 20px;
+  box-sizing: content-box; /* ensures padding doesn't shrink inner content */
+  margin-bottom: 20px;
+} /* Custom scrollbar */
+#allTasks::-webkit-scrollbar {
+  width: 8px;
+}
+#allTasks::-webkit-scrollbar-thumb {
+  background: #9b59b6;
+  border-radius: 10px;
+  border: 2px solid transparent; /* adds spacing inside border-radius */
+  background-clip: content-box; /* ensures border doesn't overlap thumb */
+}
+#allTasks::-webkit-scrollbar-thumb:hover {
+  background: #b266ff;
+}
+#allTasks::-webkit-scrollbar-track {
+  background: transparent; /* track is invisible, scroll looks inside container */
+}
+#allTasks ul {
+  list-style-type: none;
+  padding: 0;
+}
+#allTasks li {
+  background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
+  margin-bottom: 12px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+#allTasks li strong {
+  font-size: 1.1em;
+}
+#allTasks li span {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+} /* Update Task */
+#allTasks li span.updateTaskBtn {
+  color: #9b59b6;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+#allTasks li span.updateTaskBtn:hover {
+  color: #8e44ad;
+} /* Delete Task */
+#allTasks li span.deleteTaskBtn {
+  color: #e74c3c;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+#allTasks li span.deleteTaskBtn:hover {
+  color: #c0392b;
+} /* Forms */
+
+.addFormContainer {
+  background: linear-gradient(to right, #357a50, #25865d);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #0e0824;
+  margin-top: 20px;
+}
+.inputDiv {
+  margin-bottom: 18px;
+}
+.inputDiv label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: large;
+  font-weight: 800;
+}
+.inputDiv input,
+.inputDiv select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #2b2b2b;
+  color: #eaeaea;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.inputDiv input::placeholder {
+  color: #888;
+}
+.inputDiv input:focus,
+.inputDiv select:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px #1abc9c;
+  outline: none;
+} /* Messages */
+#deleteMsg,
+#updateMsg,
+#successMsg {
+  text-align: center;
+  margin: 15px 0;
+  background: linear-gradient(to right, #7a6635, #865c25);
+  padding: 1% 3%;
+  margin-top: 20px;
+  border-radius: 40px;
+}
+#deleteMsg p,
+#updateMsg p,
+#successMsg p {
+  margin: 0;
+  color: #121111;
+  font-size: 0.95em;
+  font-weight: 900;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  color: #fcf6ff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+}
