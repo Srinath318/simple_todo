@@ -33,7 +33,9 @@ async function showTasks() {
 
 // ================= Fetch Tasks =================
 async function fetchTasks() {
-  const response = await fetch("http://localhost:8080/alltasks");
+  const response = await fetch(
+    "https://simpletodobackend-production-cfba.up.railway.app/alltasks"
+  );
   const tasks = await response.json();
 
   if (!tasks.length) {
@@ -122,11 +124,14 @@ function addTasks() {
         formData.append("task", document.getElementById("task").value);
         formData.append("dueDate", document.getElementById("dueDate").value);
 
-        await fetch("http://localhost:8080/posttasks", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: formData.toString(),
-        });
+        await fetch(
+          "https://simpletodobackend-production-cfba.up.railway.app/posttasks",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: formData.toString(),
+          }
+        );
 
         // Show success message
         successMsg.style.display = "block";
@@ -147,7 +152,10 @@ function addTasks() {
 
 // ================= Delete Task =================
 async function deleteTask(id) {
-  await fetch(`http://localhost:8080/deletetask/${id}`, { method: "DELETE" });
+  await fetch(
+    `https://simpletodobackend-production-cfba.up.railway.app/deletetask/${id}`,
+    { method: "DELETE" }
+  );
 
   // Show delete message
   deleteMsg.style.display = "block";
@@ -195,7 +203,7 @@ async function updateTask(id) {
     const newDue = document.getElementById(`editDue${id}`).value;
 
     await fetch(
-      `http://localhost:8080/updatetask/${id}?task=${encodeURIComponent(
+      `https://simpletodobackend-production-cfba.up.railway.app/updatetask/${id}?task=${encodeURIComponent(
         newTask
       )}&dueDate=${encodeURIComponent(newDue)}`,
       { method: "PUT" }
