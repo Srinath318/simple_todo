@@ -225,6 +225,17 @@ footer {
   background: transparent;
 }
 
+.footer-link {
+  color: #fcf6ff; /* same as footer text */
+  text-decoration: none; /* remove underline */
+  font-weight: bold; /* optional for slight emphasis */
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #9b59b6; /* subtle hover effect */
+}
+
 /* Fully Responsive */
 @media (max-width: 1024px) {
   .addFormContainer {
