@@ -217,36 +217,28 @@ footer {
   background-color: #000000;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+/* Basic mobile responsiveness */
+@media (max-width: 480px) {
   h1 {
     font-size: 1.5em;
-    padding: 1% 0.5%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-
-  .container-main {
-    margin-top: 10px;
-    padding: 0 10px;
   }
 
   button {
-    padding: 8px 12px;
-    font-size: 0.9em;
-    margin: 5px;
-  }
-
-  #allTasks {
-    padding: 10px 15px;
-    max-height: 250px;
+    padding: 6px 12px;
+    font-size: 0.85em;
   }
 
   #allTasks li {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 10px 12px;
     gap: 8px;
-    padding: 10px 15px;
+  }
+
+  #allTasks li strong {
+    font-size: 1em;
+  }
+
+  #allTasks li span {
+    font-size: 0.8em;
   }
 
   .addFormContainer {
@@ -256,42 +248,13 @@ footer {
   .inputDiv input,
   .inputDiv select {
     padding: 8px;
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 
   #deleteMsg,
   #updateMsg,
   #successMsg {
-    padding: 10px 15px;
     font-size: 0.85em;
-  }
-
-  footer {
-    font-size: 0.85em;
-    padding: 8px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2em;
-  }
-
-  button {
-    padding: 6px 10px;
-    font-size: 0.8em;
-  }
-
-  #allTasks {
-    padding: 8px 10px;
-    max-height: 200px;
-  }
-
-  #allTasks li {
-    padding: 8px 10px;
-  }
-
-  .addFormContainer {
-    padding: 15px;
+    padding: 8px 12px;
   }
 }
